@@ -1472,11 +1472,13 @@
             },
             {
               "name": "xDist",
-              "ioValue": 3.8
+              "ioValue": 3.7,
+              "currentEquation": "3.7"
             },
             {
               "name": "yDist",
-              "ioValue": 0
+              "ioValue": 0.1,
+              "currentEquation": "0.1"
             },
             {
               "name": "zDist",
@@ -2214,12 +2216,13 @@
         },
         {
           "name": "Number",
-          "ioValue": 5
+          "ioValue": 4,
+          "currentEquation": "4"
         },
         {
           "name": "Angle",
-          "ioValue": 12,
-          "currentEquation": "12"
+          "ioValue": 11.5,
+          "currentEquation": "11.5"
         }
       ],
       "topLevel": false,
@@ -2273,11 +2276,11 @@
             },
             {
               "name": "count",
-              "ioValue": 5
+              "ioValue": 4
             },
             {
               "name": "angle",
-              "ioValue": 12
+              "ioValue": 11.5
             }
           ],
           "interpreterVersion": 1,
@@ -2429,8 +2432,8 @@
         },
         {
           "name": "yDist",
-          "ioValue": 1,
-          "currentEquation": "1"
+          "ioValue": 0,
+          "currentEquation": "0"
         },
         {
           "name": "zDist",
@@ -2451,12 +2454,12 @@
         },
         {
           "name": "xDist",
-          "ioValue": 1,
-          "currentEquation": "1"
+          "ioValue": 0
         },
         {
           "name": "yDist",
-          "ioValue": 0
+          "ioValue": 1,
+          "currentEquation": "1"
         },
         {
           "name": "zDist",
@@ -2529,22 +2532,211 @@
         },
         {
           "name": "xDist",
-          "ioValue": 7.57,
-          "currentEquation": "7.57"
+          "ioValue": 7.8,
+          "currentEquation": "7.8"
         },
         {
           "name": "yDist",
-          "ioValue": 4.85,
-          "currentEquation": "4.85"
+          "ioValue": 4.7,
+          "currentEquation": "4.7"
         },
         {
           "name": "zDist",
           "ioValue": 0
         }
       ]
+    },
+    {
+      "atomType": "Assembly",
+      "x": 0.6842,
+      "y": 0.5744,
+      "uniqueID": "id-758",
+      "ioValues": [
+        {
+          "name": "makeDisjoint",
+          "ioValue": true
+        },
+        {
+          "name": "Shape 1",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "Shape2",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "Shape3",
+          "ioValue": "__GEOMETRY_INPUT__"
+        }
+      ]
+    },
+    {
+      "atomType": "GitHubMolecule",
+      "x": 0.7669,
+      "y": 0.6964,
+      "uniqueID": "id-764",
+      "name": "RotatePattern",
+      "ioValues": [
+        {
+          "name": "Shape",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "Number",
+          "ioValue": 4
+        },
+        {
+          "name": "Angle",
+          "ioValue": 90
+        }
+      ],
+      "topLevel": false,
+      "allAtoms": [
+        {
+          "atomType": "Output",
+          "x": 1,
+          "y": 0.5,
+          "uniqueID": "id-765",
+          "ioValues": [
+            {
+              "name": "number or geometry",
+              "ioValue": "__GEOMETRY_INPUT__"
+            }
+          ]
+        },
+        {
+          "atomType": "Input",
+          "x": 0.0231,
+          "y": 0.14,
+          "uniqueID": "id-766",
+          "name": "Shape",
+          "type": "geometry",
+          "options": []
+        },
+        {
+          "atomType": "Input",
+          "x": 0.0231,
+          "y": 0.224,
+          "uniqueID": "id-767",
+          "name": "Number",
+          "options": []
+        },
+        {
+          "atomType": "Input",
+          "x": 0.0231,
+          "y": 0.308,
+          "uniqueID": "id-768",
+          "name": "Angle",
+          "options": []
+        },
+        {
+          "atomType": "Code",
+          "x": 0.6,
+          "y": 0.4,
+          "uniqueID": "id-769",
+          "ioValues": [
+            {
+              "name": "shape",
+              "ioValue": "__GEOMETRY_INPUT__"
+            },
+            {
+              "name": "count",
+              "ioValue": 4
+            },
+            {
+              "name": "angle",
+              "ioValue": 90
+            }
+          ],
+          "interpreterVersion": 1,
+          "code": "function run(\n  shape: Assembly,\n  count: number = 3,\n  angle: number = 20,\n) {\n  const axis: [number, number, number] = [0, 0, 1];\n  const center: [number, number, number] = [0, 0, 0];\n  const center2D: [number, number] = [center[0], center[1]];\n  const anglePerCopy = angle;\n  const shapesArray: Assembly[] = [];\n\n  for (let i = 0; i < count; i++) {\n    const rotationAngle = anglePerCopy * i;\n\n    const rotatedAssembly = new Assembly(shape).onLeafs((leaf) => {\n      if (leaf.is2D()) {\n        // For 2D shapes, rotating about the plane normal is done entirely\n        // within the plane. Do NOT also pivot the plane or the rotation doubles.\n        leaf.geometry = leaf.geometry.clone().rotate(rotationAngle, center2D);\n      } else {\n        leaf.geometry = leaf.geometry.clone().rotate(rotationAngle, center, axis);\n      }\n      return leaf;\n    });\n\n    shapesArray.push(rotatedAssembly);\n  }\n\n  return shapesArray;\n}",
+          "compiledCode": "\"use strict\";\nfunction run(shape, count = 3, angle = 20) {\n    const axis = [0, 0, 1];\n    const center = [0, 0, 0];\n    const center2D = [center[0], center[1]];\n    const anglePerCopy = angle;\n    const shapesArray = [];\n    for (let i = 0; i < count; i++) {\n        const rotationAngle = anglePerCopy * i;\n        const rotatedAssembly = new Assembly(shape).onLeafs((leaf) => {\n            if (leaf.is2D()) {\n                // For 2D shapes, rotating about the plane normal is done entirely\n                // within the plane. Do NOT also pivot the plane or the rotation doubles.\n                leaf.geometry = leaf.geometry.clone().rotate(rotationAngle, center2D);\n            }\n            else {\n                leaf.geometry = leaf.geometry.clone().rotate(rotationAngle, center, axis);\n            }\n            return leaf;\n        });\n        shapesArray.push(rotatedAssembly);\n    }\n    return shapesArray;\n}\n"
+        }
+      ],
+      "allConnectors": [
+        {
+          "ap2Name": "shape",
+          "ap1ID": "id-766",
+          "ap2ID": "id-769"
+        },
+        {
+          "ap2Name": "count",
+          "ap1ID": "id-767",
+          "ap2ID": "id-769"
+        },
+        {
+          "ap2Name": "angle",
+          "ap1ID": "id-768",
+          "ap2ID": "id-769"
+        },
+        {
+          "ap2Name": "number or geometry",
+          "ap1ID": "id-769",
+          "ap2ID": "id-765"
+        }
+      ],
+      "parentRepo": {
+        "contentURL": "https://raw.githubusercontent.com/BarbourSmith/RotatePattern/master/project.abundance?sanitize=true",
+        "dateCreated": "2024-10-01T18:14:59Z",
+        "dateModified": "2026-09-11T21:25:18Z",
+        "description": "",
+        "forks": 1,
+        "githubMoleculesUsed": [],
+        "html_url": "https://github.com/BarbourSmith/RotatePattern",
+        "lastFoundGit": "2026-11-08T18:23:38.924Z",
+        "likes": 0,
+        "owner": "BarbourSmith",
+        "pngURL": "https://raw.githubusercontent.com/BarbourSmith/RotatePattern/master/project.png?sanitize=true",
+        "privateRepo": false,
+        "pullRequests": [],
+        "ranking": 4,
+        "readme": "https://raw.githubusercontent.com/BarbourSmith/RotatePattern/master/README.md?sanitize=true",
+        "searchField": "rotatepattern barboursmith  ",
+        "svgURL": "https://raw.githubusercontent.com/BarbourSmith/RotatePattern/master/project.svg?sanitize=true",
+        "topMoleculeID": "",
+        "topics": [],
+        "userRanking": 0.2,
+        "userSetAsThumbnail": false,
+        "yyyy": 2024,
+        "repoName": "RotatePattern",
+        "isLocal": false
+      },
+      "unitsKey": "Inches",
+      "fileTypeVersion": 1,
+      "scaleToProjectUnits": true,
+      "lastReloadedFromGithubAt": 1794164175336
+    },
+    {
+      "atomType": "Assembly",
+      "x": 0.75,
+      "y": 0.2381,
+      "uniqueID": "id-784",
+      "ioValues": [
+        {
+          "name": "makeDisjoint",
+          "ioValue": true
+        },
+        {
+          "name": "Shape 1",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "Shape2",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "Shape3",
+          "ioValue": "__GEOMETRY_INPUT__"
+        }
+      ]
     }
   ],
   "allConnectors": [
+    {
+      "ap2Name": "Shape 1",
+      "ap1ID": "id-277",
+      "ap2ID": "id-784"
+    },
     {
       "ap2Name": "Geometry",
       "ap1ID": "id-565",
@@ -2561,9 +2753,9 @@
       "ap2ID": "id-721"
     },
     {
-      "ap2Name": "geometry",
+      "ap2Name": "Shape2",
       "ap1ID": "id-603",
-      "ap2ID": "id-733"
+      "ap2ID": "id-739"
     },
     {
       "ap2Name": "geometry",
@@ -2576,9 +2768,9 @@
       "ap2ID": "id-659"
     },
     {
-      "ap2Name": "number or geometry",
+      "ap2Name": "Shape2",
       "ap1ID": "id-703",
-      "ap2ID": "id-2"
+      "ap2ID": "id-758"
     },
     {
       "ap2Name": "geometry",
@@ -2586,9 +2778,9 @@
       "ap2ID": "id-727"
     },
     {
-      "ap2Name": "Shape2",
+      "ap2Name": "geometry",
       "ap1ID": "id-721",
-      "ap2ID": "id-739"
+      "ap2ID": "id-733"
     },
     {
       "ap2Name": "Shape 1",
@@ -2609,6 +2801,26 @@
       "ap2Name": "geometry",
       "ap1ID": "id-746",
       "ap2ID": "id-752"
+    },
+    {
+      "ap2Name": "Shape 1",
+      "ap1ID": "id-752",
+      "ap2ID": "id-758"
+    },
+    {
+      "ap2Name": "Shape",
+      "ap1ID": "id-758",
+      "ap2ID": "id-764"
+    },
+    {
+      "ap2Name": "number or geometry",
+      "ap1ID": "id-764",
+      "ap2ID": "id-2"
+    },
+    {
+      "ap2Name": "Shape2",
+      "ap1ID": "id-764",
+      "ap2ID": "id-784"
     }
   ],
   "unitsKey": "Inches",
