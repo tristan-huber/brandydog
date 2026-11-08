@@ -20,8 +20,8 @@
     },
     {
       "atomType": "Molecule",
-      "x": 0.1263,
-      "y": 0.2679,
+      "x": 0.1621,
+      "y": 0.0893,
       "uniqueID": "id-277",
       "name": "board",
       "topLevel": false,
@@ -1838,8 +1838,8 @@
     },
     {
       "atomType": "GitHubMolecule",
-      "x": 0.2018,
-      "y": 0.753,
+      "x": 0.1595,
+      "y": 0.8155,
       "uniqueID": "id-603",
       "name": "Linear-Pattern",
       "ioValues": [
@@ -2205,8 +2205,8 @@
     },
     {
       "atomType": "GitHubMolecule",
-      "x": 0.2969,
-      "y": 0.4702,
+      "x": 0.3138,
+      "y": 0.4435,
       "uniqueID": "id-659",
       "name": "RotatePattern",
       "ioValues": [
@@ -2343,8 +2343,8 @@
     },
     {
       "atomType": "Move",
-      "x": 0.2148,
-      "y": 0.5119,
+      "x": 0.2096,
+      "y": 0.5774,
       "uniqueID": "id-688",
       "ioValues": [
         {
@@ -2567,6 +2567,10 @@
         {
           "name": "Shape3",
           "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "Shape4",
+          "ioValue": "__GEOMETRY_INPUT__"
         }
       ]
     },
@@ -2729,6 +2733,32 @@
           "ioValue": "__GEOMETRY_INPUT__"
         }
       ]
+    },
+    {
+      "atomType": "Move",
+      "x": 0.3509,
+      "y": 0.2679,
+      "uniqueID": "id-790",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "xDist",
+          "ioValue": 0.72,
+          "currentEquation": "0.72"
+        },
+        {
+          "name": "yDist",
+          "ioValue": 7.56,
+          "currentEquation": "7.56"
+        },
+        {
+          "name": "zDist",
+          "ioValue": 0
+        }
+      ]
     }
   ],
   "allConnectors": [
@@ -2756,6 +2786,11 @@
       "ap2Name": "Shape2",
       "ap1ID": "id-603",
       "ap2ID": "id-739"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-603",
+      "ap2ID": "id-790"
     },
     {
       "ap2Name": "geometry",
@@ -2808,19 +2843,24 @@
       "ap2ID": "id-758"
     },
     {
+      "ap2Name": "number or geometry",
+      "ap1ID": "id-758",
+      "ap2ID": "id-2"
+    },
+    {
       "ap2Name": "Shape",
       "ap1ID": "id-758",
       "ap2ID": "id-764"
     },
     {
-      "ap2Name": "number or geometry",
-      "ap1ID": "id-764",
-      "ap2ID": "id-2"
-    },
-    {
       "ap2Name": "Shape2",
       "ap1ID": "id-764",
       "ap2ID": "id-784"
+    },
+    {
+      "ap2Name": "Shape3",
+      "ap1ID": "id-790",
+      "ap2ID": "id-758"
     }
   ],
   "unitsKey": "Inches",
