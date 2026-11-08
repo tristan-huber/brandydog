@@ -2718,7 +2718,7 @@
       "ioValues": [
         {
           "name": "makeDisjoint",
-          "ioValue": true
+          "ioValue": false
         },
         {
           "name": "Shape 1",
@@ -2746,13 +2746,13 @@
         },
         {
           "name": "xDist",
-          "ioValue": 0.72,
-          "currentEquation": "0.72"
+          "ioValue": 1,
+          "currentEquation": "1"
         },
         {
           "name": "yDist",
-          "ioValue": 7.56,
-          "currentEquation": "7.56"
+          "ioValue": 8,
+          "currentEquation": "8"
         },
         {
           "name": "zDist",
@@ -2843,11 +2843,6 @@
       "ap2ID": "id-758"
     },
     {
-      "ap2Name": "number or geometry",
-      "ap1ID": "id-758",
-      "ap2ID": "id-2"
-    },
-    {
       "ap2Name": "Shape",
       "ap1ID": "id-758",
       "ap2ID": "id-764"
@@ -2856,6 +2851,11 @@
       "ap2Name": "Shape2",
       "ap1ID": "id-764",
       "ap2ID": "id-784"
+    },
+    {
+      "ap2Name": "number or geometry",
+      "ap1ID": "id-784",
+      "ap2ID": "id-2"
     },
     {
       "ap2Name": "Shape3",
