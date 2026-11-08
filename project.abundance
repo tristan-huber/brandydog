@@ -1854,8 +1854,8 @@
         },
         {
           "name": "distX",
-          "ioValue": 24.5,
-          "currentEquation": "24.5"
+          "ioValue": 25.4,
+          "currentEquation": "25.4"
         },
         {
           "name": "distY",
@@ -2019,7 +2019,7 @@
             },
             {
               "name": "distX",
-              "ioValue": 24.5
+              "ioValue": 25.4
             },
             {
               "name": "distY",
