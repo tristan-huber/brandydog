@@ -20,8 +20,8 @@
     },
     {
       "atomType": "Molecule",
-      "x": 0.1621,
-      "y": 0.0893,
+      "x": 0.1426,
+      "y": 0.3143,
       "uniqueID": "id-277",
       "name": "board",
       "topLevel": false,
@@ -40,8 +40,8 @@
         },
         {
           "atomType": "Rectangle",
-          "x": 0.1783,
-          "y": 0.2119,
+          "x": 0.0781,
+          "y": 0.3343,
           "uniqueID": "id-281",
           "ioValues": [
             {
@@ -182,7 +182,7 @@
                   "ioValues": [
                     {
                       "name": "number or geometry",
-                      "ioValue": 0.831303517087097
+                      "ioValue": "__GEOMETRY_INPUT__"
                     }
                   ]
                 },
@@ -224,14 +224,14 @@
                       "ioValues": [
                         {
                           "name": "number or geometry",
-                          "ioValue": 0.8434531400486797
+                          "ioValue": "__GEOMETRY_INPUT__"
                         }
                       ]
                     },
                     {
                       "atomType": "Input",
-                      "x": 0.0231,
-                      "y": 0.14,
+                      "x": 0.0254,
+                      "y": 0.1538,
                       "uniqueID": "id-293",
                       "name": "Shape",
                       "type": "geometry",
@@ -344,14 +344,14 @@
                       "ioValues": [
                         {
                           "name": "number or geometry",
-                          "ioValue": 0.8191538941255144
+                          "ioValue": "__GEOMETRY_INPUT__"
                         }
                       ]
                     },
                     {
                       "atomType": "Input",
-                      "x": 0.0231,
-                      "y": 0.14,
+                      "x": 0.0254,
+                      "y": 0.1538,
                       "uniqueID": "id-299",
                       "name": "Shape",
                       "type": "geometry",
@@ -404,22 +404,12 @@
                   "y": 0.8,
                   "uniqueID": "id-300",
                   "name": "(x + y) / 2",
-                  "ioValues": [
-                    {
-                      "name": "x",
-                      "ioValue": 0.8434531400486797
-                    },
-                    {
-                      "name": "y",
-                      "ioValue": 0.8191538941255144
-                    }
-                  ],
                   "currentEquation": "(x + y) / 2"
                 },
                 {
                   "atomType": "Input",
-                  "x": 0.0231,
-                  "y": 0.14,
+                  "x": 0.0254,
+                  "y": 0.1538,
                   "uniqueID": "id-301",
                   "name": "rectangle",
                   "type": "geometry",
@@ -427,8 +417,8 @@
                 },
                 {
                   "atomType": "Input",
-                  "x": 0.0231,
-                  "y": 0.224,
+                  "x": 0.0254,
+                  "y": 0.2462,
                   "uniqueID": "id-302",
                   "name": "outer",
                   "type": "geometry",
@@ -436,8 +426,8 @@
                 },
                 {
                   "atomType": "Input",
-                  "x": 0.0231,
-                  "y": 0.308,
+                  "x": 0.0254,
+                  "y": 0.3385,
                   "uniqueID": "id-303",
                   "name": "inner",
                   "type": "geometry",
@@ -499,12 +489,6 @@
               "y": 0.1,
               "uniqueID": "id-304",
               "name": "x * 2",
-              "ioValues": [
-                {
-                  "name": "x",
-                  "ioValue": 0.831303517087097
-                }
-              ],
               "currentEquation": "x * 2"
             },
             {
@@ -517,10 +501,6 @@
                 {
                   "name": "width",
                   "ioValue": 6
-                },
-                {
-                  "name": "offset",
-                  "ioValue": 1.662607034174194
                 }
               ],
               "currentEquation": "ceil(width / offset)"
@@ -565,16 +545,16 @@
             },
             {
               "atomType": "Input",
-              "x": 0.0231,
-              "y": 0.14,
+              "x": 0.0254,
+              "y": 0.1538,
               "uniqueID": "id-309",
               "name": "width",
               "options": []
             },
             {
               "atomType": "Input",
-              "x": 0.0231,
-              "y": 0.224,
+              "x": 0.0254,
+              "y": 0.2462,
               "uniqueID": "id-310",
               "name": "diam",
               "options": []
@@ -613,8 +593,8 @@
             },
             {
               "atomType": "Input",
-              "x": 0.0231,
-              "y": 0.308,
+              "x": 0.0254,
+              "y": 0.3385,
               "uniqueID": "id-313",
               "name": "overlap_degrees",
               "options": []
@@ -645,8 +625,8 @@
             },
             {
               "atomType": "Input",
-              "x": 0.0231,
-              "y": 0.392,
+              "x": 0.0254,
+              "y": 0.4308,
               "uniqueID": "id-315",
               "name": "tolerance",
               "options": []
@@ -801,8 +781,8 @@
                 },
                 {
                   "atomType": "Input",
-                  "x": 0.0231,
-                  "y": 0.14,
+                  "x": 0.0254,
+                  "y": 0.1538,
                   "uniqueID": "id-325",
                   "name": "assembly",
                   "options": []
@@ -861,10 +841,6 @@
                   "ioValue": "__GEOMETRY_INPUT__"
                 },
                 {
-                  "name": "xDist",
-                  "ioValue": 0.831303517087097
-                },
-                {
                   "name": "yDist",
                   "ioValue": 0
                 },
@@ -882,17 +858,8 @@
               "name": "Linear-Pattern",
               "ioValues": [
                 {
-                  "name": "Number",
-                  "ioValue": 4,
-                  "currentEquation": "repeats"
-                },
-                {
                   "name": "Geometry",
                   "ioValue": "__GEOMETRY_INPUT__"
-                },
-                {
-                  "name": "distX",
-                  "ioValue": 1.662607034174194
                 },
                 {
                   "name": "distY",
@@ -935,8 +902,8 @@
                 },
                 {
                   "atomType": "Input",
-                  "x": 0.0231,
-                  "y": 0.14,
+                  "x": 0.0254,
+                  "y": 0.1538,
                   "uniqueID": "id-330",
                   "name": "Number",
                   "type": "number",
@@ -944,8 +911,8 @@
                 },
                 {
                   "atomType": "Input",
-                  "x": 0.0231,
-                  "y": 0.224,
+                  "x": 0.0254,
+                  "y": 0.2462,
                   "uniqueID": "id-331",
                   "name": "Geometry",
                   "type": "geometry",
@@ -953,8 +920,8 @@
                 },
                 {
                   "atomType": "Input",
-                  "x": 0.0231,
-                  "y": 0.308,
+                  "x": 0.0254,
+                  "y": 0.3385,
                   "uniqueID": "id-332",
                   "name": "distX",
                   "type": "number",
@@ -962,8 +929,8 @@
                 },
                 {
                   "atomType": "Input",
-                  "x": 0.0231,
-                  "y": 0.392,
+                  "x": 0.0254,
+                  "y": 0.4308,
                   "uniqueID": "id-333",
                   "name": "distY",
                   "type": "number",
@@ -971,8 +938,8 @@
                 },
                 {
                   "atomType": "Input",
-                  "x": 0.0231,
-                  "y": 0.476,
+                  "x": 0.0254,
+                  "y": 0.5231,
                   "uniqueID": "id-334",
                   "name": "distZ",
                   "type": "number",
@@ -1049,14 +1016,6 @@
                     {
                       "name": "shape",
                       "ioValue": "__GEOMETRY_INPUT__"
-                    },
-                    {
-                      "name": "count",
-                      "ioValue": 4
-                    },
-                    {
-                      "name": "distX",
-                      "ioValue": 1.662607034174194
                     },
                     {
                       "name": "distY",
@@ -1472,13 +1431,11 @@
             },
             {
               "name": "xDist",
-              "ioValue": 3.7,
-              "currentEquation": "3.7"
+              "ioValue": 3.7
             },
             {
               "name": "yDist",
-              "ioValue": 0.1,
-              "currentEquation": "0.1"
+              "ioValue": 0.1
             },
             {
               "name": "zDist",
@@ -1522,8 +1479,8 @@
             },
             {
               "atomType": "Input",
-              "x": 0.0231,
-              "y": 0.14,
+              "x": 0.0254,
+              "y": 0.1538,
               "uniqueID": "id-346",
               "name": "Shape",
               "type": "geometry",
@@ -1531,16 +1488,16 @@
             },
             {
               "atomType": "Input",
-              "x": 0.0231,
-              "y": 0.224,
+              "x": 0.0254,
+              "y": 0.2462,
               "uniqueID": "id-347",
               "name": "Number",
               "options": []
             },
             {
               "atomType": "Input",
-              "x": 0.0231,
-              "y": 0.308,
+              "x": 0.0254,
+              "y": 0.3385,
               "uniqueID": "id-348",
               "name": "Angle",
               "options": []
@@ -1634,8 +1591,7 @@
             },
             {
               "name": "height",
-              "ioValue": 0.25,
-              "currentEquation": "0.25"
+              "ioValue": 0.25
             }
           ]
         },
@@ -1659,8 +1615,7 @@
             },
             {
               "name": "zDist",
-              "ioValue": -0.25,
-              "currentEquation": "-0.25"
+              "ioValue": -0.25
             }
           ]
         },
@@ -1785,8 +1740,7 @@
             },
             {
               "name": "height",
-              "ioValue": -0.1,
-              "currentEquation": "-0.1"
+              "ioValue": -0.1
             }
           ]
         },
@@ -1798,8 +1752,7 @@
           "ioValues": [
             {
               "name": "diameter",
-              "ioValue": 0.4,
-              "currentEquation": "0.4"
+              "ioValue": 0.4
             }
           ]
         },
@@ -1845,8 +1798,7 @@
       "ioValues": [
         {
           "name": "Number",
-          "ioValue": 4,
-          "currentEquation": "4"
+          "ioValue": 4
         },
         {
           "name": "Geometry",
@@ -1854,8 +1806,7 @@
         },
         {
           "name": "distX",
-          "ioValue": 25.4,
-          "currentEquation": "25.4"
+          "ioValue": 25.4
         },
         {
           "name": "distY",
@@ -1898,8 +1849,8 @@
         },
         {
           "atomType": "Input",
-          "x": 0.0231,
-          "y": 0.14,
+          "x": 0.0254,
+          "y": 0.1538,
           "uniqueID": "id-591",
           "name": "Number",
           "type": "number",
@@ -1907,8 +1858,8 @@
         },
         {
           "atomType": "Input",
-          "x": 0.0231,
-          "y": 0.224,
+          "x": 0.0254,
+          "y": 0.2462,
           "uniqueID": "id-592",
           "name": "Geometry",
           "type": "geometry",
@@ -1916,8 +1867,8 @@
         },
         {
           "atomType": "Input",
-          "x": 0.0231,
-          "y": 0.308,
+          "x": 0.0254,
+          "y": 0.3385,
           "uniqueID": "id-593",
           "name": "distX",
           "type": "number",
@@ -1925,8 +1876,8 @@
         },
         {
           "atomType": "Input",
-          "x": 0.0231,
-          "y": 0.392,
+          "x": 0.0254,
+          "y": 0.4308,
           "uniqueID": "id-594",
           "name": "distY",
           "type": "number",
@@ -1934,8 +1885,8 @@
         },
         {
           "atomType": "Input",
-          "x": 0.0231,
-          "y": 0.476,
+          "x": 0.0254,
+          "y": 0.5231,
           "uniqueID": "id-595",
           "name": "distZ",
           "type": "number",
@@ -2216,13 +2167,11 @@
         },
         {
           "name": "Number",
-          "ioValue": 4,
-          "currentEquation": "4"
+          "ioValue": 4
         },
         {
           "name": "Angle",
-          "ioValue": 11.5,
-          "currentEquation": "11.5"
+          "ioValue": 11.5
         }
       ],
       "topLevel": false,
@@ -2241,8 +2190,8 @@
         },
         {
           "atomType": "Input",
-          "x": 0.0231,
-          "y": 0.14,
+          "x": 0.0254,
+          "y": 0.1538,
           "uniqueID": "id-655",
           "name": "Shape",
           "type": "geometry",
@@ -2250,16 +2199,16 @@
         },
         {
           "atomType": "Input",
-          "x": 0.0231,
-          "y": 0.224,
+          "x": 0.0254,
+          "y": 0.2462,
           "uniqueID": "id-656",
           "name": "Number",
           "options": []
         },
         {
           "atomType": "Input",
-          "x": 0.0231,
-          "y": 0.308,
+          "x": 0.0254,
+          "y": 0.3385,
           "uniqueID": "id-657",
           "name": "Angle",
           "options": []
@@ -2353,8 +2302,7 @@
         },
         {
           "name": "xDist",
-          "ioValue": 5.25,
-          "currentEquation": "5.25"
+          "ioValue": 5.25
         },
         {
           "name": "yDist",
@@ -2386,8 +2334,7 @@
         },
         {
           "name": "z-axis degrees",
-          "ioValue": -24,
-          "currentEquation": "-24"
+          "ioValue": -24
         }
       ]
     },
@@ -2411,8 +2358,7 @@
         },
         {
           "name": "z-axis degrees",
-          "ioValue": 90,
-          "currentEquation": "90"
+          "ioValue": 90
         }
       ]
     },
@@ -2432,13 +2378,11 @@
         },
         {
           "name": "yDist",
-          "ioValue": 0,
-          "currentEquation": "0"
+          "ioValue": 0
         },
         {
           "name": "zDist",
-          "ioValue": 0,
-          "currentEquation": "0"
+          "ioValue": 0
         }
       ]
     },
@@ -2458,8 +2402,7 @@
         },
         {
           "name": "yDist",
-          "ioValue": 1,
-          "currentEquation": "1"
+          "ioValue": 1
         },
         {
           "name": "zDist",
@@ -2532,13 +2475,11 @@
         },
         {
           "name": "xDist",
-          "ioValue": 7.8,
-          "currentEquation": "7.8"
+          "ioValue": 7.8
         },
         {
           "name": "yDist",
-          "ioValue": 4.7,
-          "currentEquation": "4.7"
+          "ioValue": 4.7
         },
         {
           "name": "zDist",
@@ -2610,8 +2551,8 @@
         },
         {
           "atomType": "Input",
-          "x": 0.0231,
-          "y": 0.14,
+          "x": 0.0254,
+          "y": 0.1538,
           "uniqueID": "id-766",
           "name": "Shape",
           "type": "geometry",
@@ -2619,16 +2560,16 @@
         },
         {
           "atomType": "Input",
-          "x": 0.0231,
-          "y": 0.224,
+          "x": 0.0254,
+          "y": 0.2462,
           "uniqueID": "id-767",
           "name": "Number",
           "options": []
         },
         {
           "atomType": "Input",
-          "x": 0.0231,
-          "y": 0.308,
+          "x": 0.0254,
+          "y": 0.3385,
           "uniqueID": "id-768",
           "name": "Angle",
           "options": []
@@ -2746,13 +2687,11 @@
         },
         {
           "name": "xDist",
-          "ioValue": 1,
-          "currentEquation": "1"
+          "ioValue": 1
         },
         {
           "name": "yDist",
-          "ioValue": 8,
-          "currentEquation": "8"
+          "ioValue": 8
         },
         {
           "name": "zDist",
